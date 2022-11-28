@@ -1,0 +1,12 @@
+.text {
+    background-color:bisque ;
+    border: 2px solid rgb(10, 5, 5);
+    color: red;
+}
+
+.tex {
+    background-color:burlywood;
+    border: 2px solid black;
+    color: green;
+
+}

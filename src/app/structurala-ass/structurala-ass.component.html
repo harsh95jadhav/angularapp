@@ -1,0 +1,65 @@
+<!-- <p>structurala-ass works!</p> -->
+<div class="border">
+<div class="text">
+    <input type="checkbox" (click)="onMethod()"><label>click here</label>
+    <p *ngIf="clicked" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero recusandae fugiat dignissimos amet adipisci error!</p>
+</div>
+<hr>
+<!-- <p *ngIf="!clicked" type="checkbox">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, cumque. Voluptatibus asperiores qui totam iste?</p> -->
+
+<div class="bold">
+    {{title}}
+</div>
+<hr>
+
+<!-- <caption>ELECTRONIC INSTRUMENTS</caption>
+</div> -->
+<div class="test" >
+
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>sr no</th>
+                <th>productImage</th>
+                <th>Product name</th>
+                <th>ID</th>
+                <th>Prise</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let instrument of instruments">
+                <td>{{instrument.srNo}}</td>
+                <td><img src="{{instrument.productImage}}" width="80" height="80"></td>
+                <td>{{instrument.productName}}</td>
+                <td>{{instrument.ID}}</td>
+                <td>{{instrument.prise}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div>
+    <select (change)="getCourseValue($event)" width="100">
+        <option value="Please select course">Please select course</option>
+        <option value="Angular">Angular</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Java">Java</option>
+        <option value="react">react</option>
+    </select>
+    
+</div>
+<div class="col-md-12" [ngSwitch]="selectedCourse">
+    <div *ngSwitchCase="'Angular'">
+    <h4>Angular</h4>
+    </div>
+    <div *ngSwitchCase="'JavaScript'">
+    <h4>JavaScript</h4>
+    </div>
+    <div *ngSwitchCase="'Java'">
+    <h4>Java</h4>
+    </div>
+    <div *ngSwitchCase="'react'">
+    <h4>react</h4></div>
+
+</div>
+</div>

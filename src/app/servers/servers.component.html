@@ -1,0 +1,17 @@
+<div>
+    <h1 class="text">This is a warning, you are in danger</h1>
+</div>
+
+<div>
+    <h1 class="tex">You are succesful!</h1>
+</div>
+
+<div><label>{{name}}</label></div>
+
+<div><button [disabled]=" !alloeNewServer" (click)="onCreateServer()">Add server</button></div>
+<div>{{serverCreationStatus}}</div>
+
+<div>
+    <input type="text" [(ngModel)]="serverName">
+</div>
+{{serverName}}
