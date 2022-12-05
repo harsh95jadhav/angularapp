@@ -1,0 +1,17 @@
+<p>dirassign works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-primary" (click)="showSecret = !showSecret">Display Details</button>
+            <p *ngIf="showSecret">secrate password = tuna</p>
+            <div *ngFor="let logitem of log"
+            [ngStyle]="{backgroundColor:logitem>=5}">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

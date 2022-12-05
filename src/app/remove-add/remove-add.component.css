@@ -1,0 +1,40 @@
+.table{
+    border: 3px solid black ;
+    border-collapse: collapse;
+    margin: 50px 50px 50px 50px;
+    background-color:deeppink;
+}
+.col{
+    margin: auto; 
+    padding: auto;
+    font-size: larger;
+    font-weight: bold;
+    border: solid 2px aliceblue;
+    background-color: rgb(205, 168, 240);
+}
+.head{
+    margin: 10px;
+    padding: 50px 50px 50px 50px;
+    background-color: rgb(236, 108, 108);
+    
+}
+.body{
+    margin: 50px 50px 50px 50px;
+    padding: 10px 10px 10px 10px;
+}
+/* .table thead tr th{
+    background-color: palevioletred;
+    color: black;
+    text-align: center;
+}
+.table tbody tr td{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+} */
+/* .image{
+    background-image: url(src/assets/bigg boss marathi.jpg.jpg);
+    background-size:cover ;
+    background-repeat: no-repeat;
+} */
+

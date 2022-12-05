@@ -12,6 +12,10 @@ import { DatabindingassComponent } from './databindingass/databindingass.compone
 import { StructuralaAssComponent } from './structurala-ass/structurala-ass.component';
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
+import { DirassignComponent } from './dirassign/dirassign.component';
+import { OutputComponent } from './output/output.component';
+import { RemoveAssignComponent } from './remove-assign/remove-assign.component';
+import { RemoveAddComponent } from './remove-add/remove-add.component';
 
 
 @NgModule({
@@ -24,7 +28,12 @@ import { CustdirDirective } from './custdir.directive';
     DatabindingassComponent,
     StructuralaAssComponent,
     AttriComponent,
-    CustdirDirective
+    CustdirDirective,
+    DirassignComponent,
+    OutputComponent,
+    RemoveAssignComponent,
+    RemoveAddComponent
+  
 
   ],
   // get declarations() {

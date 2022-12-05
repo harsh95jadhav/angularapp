@@ -29,10 +29,14 @@ export class AttriComponent implements OnInit {
       "country": "USA"
     }
   ]
-
+uname;
   constructor() { }
 
   ngOnInit() {
   }
-
+  show(value)
+  {
+    this.uname = value;
+    
+  }
 }

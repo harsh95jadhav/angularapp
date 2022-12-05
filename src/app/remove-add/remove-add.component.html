@@ -1,0 +1,34 @@
+<!-- <p>remove-add works!</p> -->
+<div class="table">
+    <div style="text-align:center ;">
+        <!-- <img src="assets/bigg boss marathi.jpg.jpg"> -->
+        <label><h1>Big Boss Marathi Member</h1></label>
+        <br>
+        <br>
+        <input type="text" style="text-align: center;" placeholder="Add item" [(ngModel)]="member">
+        <button class="btn btn-primary addbtn" (click)="clickToAdd()">Add</button>
+        <br>
+        <br>
+        <table class="col">
+            <thead class="head">
+                <tr>
+                    <th>Sr no</th>
+                    <th>Member Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="body">
+                <tr *ngFor="let m of members, let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{m}}</td>
+                    <td>
+                        <button class="btn btn-danger" [value]="i" (click)="removeItem($event)">Eliminate</button>
+                    </td>
+                </tr>
+            </tbody>
+            
+
+            
+        </table>
+    </div>
+</div>

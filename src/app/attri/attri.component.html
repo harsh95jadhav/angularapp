@@ -14,3 +14,15 @@
      {{person.name}} ({{person.country}})
     </li>
 </ul>
+
+<!-- <div>
+    <input type="text" name="" id="" #uusername (keyup.enter)="show(uusername.value)">
+</div> -->
+<div>
+    <!-- when template variable used then no need to add $event in show method -->
+    <input type="text" name="" id="" #username> 
+</div>
+<button (click)="show(username.value)">sho</button>
+<div>
+    {{uname}}
+</div>
