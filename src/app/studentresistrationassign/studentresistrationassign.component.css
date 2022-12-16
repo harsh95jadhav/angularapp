@@ -1,0 +1,24 @@
+/* .borde{
+    border: 4px solid black;
+    margin: 10px 10px 10px 10px;
+} */
+/* .bg-img {
+    background-image: url("/assets.download.jpg");
+    background-repeat: no-repeat;
+    min-height: 100px;
+} */
+
+.text {
+    text-align: center;
+    text-shadow: 0 0 10px black;
+    margin-bottom: 40px;
+
+}
+.test {
+    background-color: aquamarine;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+    box-shadow: 0 0 13px #ff000021;
+}

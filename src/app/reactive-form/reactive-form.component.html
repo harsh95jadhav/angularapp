@@ -1,0 +1,17 @@
+<!-- <p>reactive-form works!</p> -->
+<div class="container">
+    <div class="row justify-containt-centre">
+        <div class="col-md-6  rounded shadow py-5">
+        <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input type="text" name="Username" id="Username" formControlName="Username" placeholder="user name">
+            </div>
+            <div class="form-group">
+            <input type="text" name="email" id="email" formControlName="email" placeholder="email">
+            <small *ngIf="! myReactiveForm.get(email).valid && myReactiveForm.get(email).touched">Please enter valid email</small>
+            </div>
+            <button class="btn btn-success">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>

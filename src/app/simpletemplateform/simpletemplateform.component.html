@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row justify-containt-centre">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+                <div ngModelGroup="userDetails" #details="ngModelGroup">
+                <div class="form-group" >
+                    <label for="Username">Username</label>
+                    <!-- required validation used -->
+                    <!-- ngModel and name is compulsary for create formContrl -->
+                    <input type="text" class="form-control" id="Username" name="Username" placeholder="Enter User Name"
+                        [(ngModel)]="Username" required>
+                        <!-- used two way data binding syntax already given in ngModel for formContrl,for show the typed content below the textbox -->
+                        <!-- ngif is used to show data when user enter any value otherwise hide it -->
+                     <small *ngIf="Username">User name is : {{Username}}</small>   
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <!-- required validation used -->
+                    <!-- email is applied for gives the value in email formate  -->
+                    <input type="email" class="form-control" id="email" #email="ngModel" email name="email" placeholder="Enter email"
+                        ngModel required>
+                        <!-- when user enter wrong email id or only touched it then show this msg and enter valid email then this msg will be hide then use ngif with TRV(#) -->
+                        <!-- when used TRV(#) assign with ngModel bcs we need to used the ngModel property i.e valid or touched -->
+                    <small class="text-danger" *ngIf="!email.valid && email.touched">entre valid email</small>
+
+                </div>
+                <small *ngIf="!details.valid && details.touched">Please enter valid details</small>
+            </div>
+
+                <div class="from-group">
+                    <label for="course">Select Course</label>
+                    <select name="course" id="course" class="form-control" [ngModel]="defaultvalue">
+                        <option value="select course">select course</option>
+                        <option value="Angular">Angular</option>
+                        <option value="HTML">HTML</option>
+                        <option value="Javascript">Javascript</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                        <!-- create a radio button dynamically -->
+                        <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" [ngModel]="defaultgender" class="custom-control-input">
+                        <label for="{{gender.id}}" class="custom-control-lable">{{gender.value}}</label>
+
+                    </div>
+                </div>
+                <!-- disable property binding is used for when we entre input data valid then submit butten is enable.when we enter wrong data then this is disabled -->
+                <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+
+
+    </div>
+</div>

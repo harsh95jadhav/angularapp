@@ -7,15 +7,21 @@ import { ServerComponent } from './server/server.component';
 import { warningAlert } from './servers/servers.component';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatabindingassComponent } from './databindingass/databindingass.component';
 import { StructuralaAssComponent } from './structurala-ass/structurala-ass.component';
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { DirassignComponent } from './dirassign/dirassign.component';
 import { OutputComponent } from './output/output.component';
-import { RemoveAssignComponent } from './remove-assign/remove-assign.component';
 import { RemoveAddComponent } from './remove-add/remove-add.component';
+import { HookComponent } from './hook/hook.component';
+import { InputComponent } from './input/input.component';
+import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component';
+import { StudentresistrationassignComponent } from './studentresistrationassign/studentresistrationassign.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveFormAssignComponent } from './reactive-form-assign/reactive-form-assign.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 
 @NgModule({
@@ -31,8 +37,14 @@ import { RemoveAddComponent } from './remove-add/remove-add.component';
     CustdirDirective,
     DirassignComponent,
     OutputComponent,
-    RemoveAssignComponent,
-    RemoveAddComponent
+    RemoveAddComponent,
+    HookComponent,
+    InputComponent,
+    SimpletemplateformComponent,
+    StudentresistrationassignComponent,
+    ReactiveFormComponent,
+    ReactiveFormAssignComponent,
+    TemplateDrivenFormComponent
   
 
   ],
@@ -45,7 +57,8 @@ import { RemoveAddComponent } from './remove-add/remove-add.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

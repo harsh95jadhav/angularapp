@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { info } from './employee/employdata';
+import { NgForm } from '@angular/forms';
+// import { info } from './employee/employdata';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,21 @@ import { info } from './employee/employdata';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  uid:number;
+  ddata:string;
   title = 'angularapp';
-
+  
+  getData(ev){
+    this.ddata=ev.target.value
+  }
 
 
  data:string[] = [];
 
+ OnSubmit(form:NgForm){
+  console.log(form);
+  
+ }
 
 // myData:info[]=[
 //   {srNo:"1", EmployeName:"ram", companyName:"tata", department:"quality", salary:"20000"},

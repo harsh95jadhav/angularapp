@@ -1,0 +1,126 @@
+<div class="container">
+  <!-- <img src="assets/download.jpg" > -->
+  <div class="row justify-containt-centre test">
+
+
+    <div class="col-md-6  rounded shadow py-5">
+      <h3 class="text">Student Resistraition Form</h3>
+      <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+        <div class="row">
+          <div class="form-group col-md-4">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" id="Name" name="FirstName" placeholder="First Name" [(ngModel)]="FirstName" required>
+            <small *ngIf="FirstName">First name is:{{FirstName}}</small>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="Middle name">Middle Name</label>
+            <input type="text" class="form-control" id="Middle Name" name="MiddleName" placeholder="MiddleName" [(ngModel)]="MiddleName"
+              required>
+            <small *ngIf="MiddleName">Middle name is : {{MiddleName}}</small>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="Last name">Last Name</label>
+            <input type="text" class="form-control" id="Last Name" name="LastName" placeholder="Last Name" [(ngModel)]="LastName"
+              required>
+            <small *ngIf="LastName">Last name is : {{LastName}}</small>
+          </div>
+        </div>
+        <div>
+          <label for="Date of birt">DOB</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" #Email="ngModel" email placeholder="Email" name="Email" ngModel required>
+            <small class="text-danger" *ngIf="!Email.valid  && Email.touched">Enter valid Details</small>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password" ngModel
+              required>
+          </div>
+        </div>
+        <div ngModelGroup="useDetails" #Details="ngModelGroup">
+          <div class="form-group">
+            <label for="Address">Address</label>
+            <input type="text" class="form-control" id="Address" placeholder="Building no Road " name="address" ngModel>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="inputCity">City</label>
+              <input type="text" class="form-control" id="inputCity" name="city " ngModel>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="state">State</label>
+              <select id="state" class="form-control" name="state" ngModel>
+                <option selected>Choose...</option>
+                <option>Maharastra</option>
+                <option>Gujrat</option>
+                <option>Odisa</option>
+              </select>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="pin">Pin Code</label>
+              <input type="text" class="form-control" id="pin Code" name="pin" ngModel>
+            </div>
+            <small *ngIf="! Details.valid  && Details.touched">Please Enter valid details</small>
+          </div>
+        
+          <div class="form-group">
+            <label for="course">Select Course</label>
+            <select class="form-control" name="course" id="course" ngModel>
+                <option value="Angular">Angular</option>
+                <option value="HTML">HTML</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+        </div>
+
+          <div class="row">
+            <div class="form-group col-md-4">
+              <legend class="col-form-label col-sm-2 pt-0" >Gender</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Male" id="Male" checked >
+                  <label for="male"> Male </label>
+                </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Male" id="male" checked >
+                    <label for="Female"> Female </label>
+                  </div>
+                  <!-- <label for="Gender">Gender</label>
+                              <input type="radio" class="form-control" >
+                              <label for="male">male</label> -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="checkbox" name="checkbox" ngModel>
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="row justify-content-centre mt-2">
+           <div class="col-md-6 rounded shadow py-4">
+            <h2>Form Data</h2>
+            <p>First Name : <strong>{{ddata.firstname}}</strong></p>
+            <p>Middle Name : <strong>{{ddata.middlename}}</strong></p>
+            <p>Last name : <strong>{{ddata.lastname}}</strong></p>
+            <p>Course : <strong>{{ddata.course}}</strong></p>
+            <p>Adress : <strong>{{ddata.address}}</strong></p>
+            <p>City : <strong>{{ddata.city}}</strong></p>
+            <p>State : <strong>{{ddata.state}}</strong></p>
+
+           </div> 
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
