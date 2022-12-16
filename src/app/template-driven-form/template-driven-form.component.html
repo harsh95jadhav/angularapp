@@ -1,6 +1,51 @@
-<!-- <p>template-driven-form works!</p> -->
-<div class="row justify-containt-centre" >
-    <div class="col-md-6 rounded shadow py-5">
-        <input id="" name="" class="">
+<div class="container"><!-- <p>template-driven-form works!</p> -->
+    <div class="row justify-content-centre">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+                <div class="form-Group">
+                    <label for="Username">Username</label>
+                    <input type="text" id="Username" name="Username" class="form-control"
+                        placeholder="Enter Username here" [(ngModel)]="Username" required>
+                        <small *ngIf="Username">user name is : {{Username}}</small>
+                </div>
+                <div class="form-Group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" #email="ngModel" email class="form-control" placeholder="Enter email here"
+                        required ngModel>
+                        <small *ngIf="! email.valid && email.touched" class="text-danger">enter valid email</small>
+
+                </div>
+                <div class="form-Group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control"
+                        placeholder="Enter password here" required [ngModel]="password">
+                        <small *ngIf="password">min 5 no needed is : {{password}}</small>
+
+                </div>
+                <div class="form-Group">
+                    <label for="Courcess">Courcess</label>
+                    <select name="Courcess" id="Courcess" class="form-control" ngModel>
+                        <option value="Angular">Angular</option>
+                        <option value="HTML">HTML</option>
+                        <option value="JAVA">JAVA</option>
+                    </select>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <!-- <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button> -->
+
+            </form>
+            <div class="row justify-content-centre">
+                <div class="col-md-6 text-left rounded shadow py-5" *ngIf="submited">
+                    <h2> form data </h2>
+                    <p>username: <strong>{{formData.username}}</strong></p>
+                    <p>email: <strong>{{formData.email}}</strong></p>
+                    <p>password: <strong>{{formData.password}}</strong></p>
+                    <p>course: <strong>{{formData.course}}</strong></p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>

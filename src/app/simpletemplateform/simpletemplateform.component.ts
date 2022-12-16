@@ -18,7 +18,7 @@ export class SimpletemplateformComponent implements OnInit {
   ngOnInit() {
   }
   OnSubmit(form:NgForm){
-  console.log(form.value);
+  console.log(form);
   
   }
 
