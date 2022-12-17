@@ -7,6 +7,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reactive-form.component.css']
 })
 export class ReactiveFormComponent implements OnInit {
+  notAllowedNames = ['codemind', 'technology']
+  genders = [
+    {id:'1', value:'Male'},
+    {id:'2', value:'Female'},
+
+  ]
   myReactiveForm:FormGroup;
   constructor() {
     this.createForm();
@@ -16,13 +22,24 @@ export class ReactiveFormComponent implements OnInit {
   }
   createForm(){
     this.myReactiveForm = new FormGroup({
-      'Username': new FormControl('',Validators.required),
-      'email':new FormControl('email',[Validators.required,Validators.email])
+      // this.NaNames.bind(this) is used to show the erroe msg for pericular word eg codemind , technolog
+      'Username': new FormControl('',[Validators.required,this.NaNames.bind(this)]),
+      'email':new FormControl('',[Validators.required, Validators.email]),
+      'course':new FormControl('Angular',Validators.required),
+      'gender':new FormControl('Male')
     })
   }
   onSubmit(){
     console.log(this.myReactiveForm);
     
+
+  }
+
+  NaNames(control:FormControl){
+    if(this.notAllowedNames.indexOf(control.value) !== -1){
+      return{'namesNotAllowed':true}
+    }
+    return null
   }
 
 }
