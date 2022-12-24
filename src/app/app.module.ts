@@ -23,6 +23,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveFormAssignComponent } from './reactive-form-assign/reactive-form-assign.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { TemplateassComponent } from './templateass/templateass.component';
+import { Serviecomp1Component } from './serviecomp1/serviecomp1.component';
+import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { TemplateassComponent } from './templateass/templateass.component';
     ReactiveFormComponent,
     ReactiveFormAssignComponent,
     TemplateDrivenFormComponent,
-    TemplateassComponent
+    TemplateassComponent,
+    Serviecomp1Component,
+    Servicecomp2Component
   
 
   ],
