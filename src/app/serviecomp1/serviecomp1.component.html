@@ -1,3 +1,10 @@
 <p>serviecomp1 works!</p>
 
 <button (click)="onSubscribe()">subscribe</button>
+<br>
+<ng-container *ngFor="let product of products">
+    product name : <strong>{{product.name}}</strong>
+    product id : <strong>{{product.id}}</strong>
+    <br>
+
+</ng-container>

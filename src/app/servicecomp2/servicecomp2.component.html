@@ -1,3 +1,9 @@
 <p>servicecomp2 works!</p>
 
 <button (click)="onSubscribe()">subscribe</button>
+<br>
+<ng-container *ngFor="let product of products">
+product id : <strong>{{product.id}}</strong>    
+product name : <strong>{{product.name}}</strong>
+<br>
+</ng-container>
