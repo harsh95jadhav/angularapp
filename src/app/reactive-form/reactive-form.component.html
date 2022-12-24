@@ -33,10 +33,26 @@
                     <label for="{{gender.id}}">{{gender.value}}</label>
 
                 </div>
-            
+            <div class="form-group" formArrayName="skills">
+
+            </div>
             </div>
             <button type="submit" class="btn btn-success">Submit</button>
         </form>
+    </div>
+    <div class="row justify-content-centre mt-2" *ngIf="submited">
+        <div class="col-md-6 rounded shadow py-4">
+            <h2>reactive form data</h2>
+            <p>user name : {{myReactiveForm.get('Username').value}}</p>
+            <p>email : {{myReactiveForm.get('email').value}}</p>
+            <p>cource : {{myReactiveForm.get('course').value}}</p>
+            <p>gender : {{myReactiveForm.get('gender').value}}</p>
+
+        </div>
+
+
+        
+
     </div>
     </div>
 </div>

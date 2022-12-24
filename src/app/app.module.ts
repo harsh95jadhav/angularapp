@@ -22,6 +22,7 @@ import { StudentresistrationassignComponent } from './studentresistrationassign/
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveFormAssignComponent } from './reactive-form-assign/reactive-form-assign.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { TemplateassComponent } from './templateass/templateass.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     StudentresistrationassignComponent,
     ReactiveFormComponent,
     ReactiveFormAssignComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    TemplateassComponent
   
 
   ],

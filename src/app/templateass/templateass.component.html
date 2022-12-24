@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="row justify-content-centre">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+                <div class="form-group">
+                    <label for="Username">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" placeholder="firstname"
+                        [(ngModel)]="firstname" maxlength="10" required #fname="ngModel">
+                    <!-- <small *ngIf="username">Username is : {{username}}</small> -->
+                    <small class="text-danger" *ngIf="!fname.valid && fname.touched">first name required and only 10
+                        character allow</small>
+                </div>
+                <div class="form-group">
+                    <label for="Username">Middle Name</label>
+                    <input type="text" id="middlename" name="middlename" class="form-control" placeholder="middlename"
+                        [(ngModel)]="middlename" maxlength="6" required #mname="ngModel">
+                    <small class="text-danger" *ngIf="!mname.valid && mname.touched">middle name required and only 0-6
+                        character allow</small>
+                </div>
+                <div class="form-group">
+                    <label for="Username">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" placeholder="lastname"
+                        [(ngModel)]="lastname" maxlength="6" required #lname="ngModel">
+                    <small class="text-danger" *ngIf="!lname.valid && lname.touched">last name required and only 6
+                        character allow</small>
+                </div>
+                <div class="form-group">
+                    <label for="Age">Age</label>
+                    <input type="text" id="Age" name="Age" class="form-control" placeholder="Age" [(ngModel)]="Age"
+                        maxlength="10-18" required #age="ngModel">
+                    <small class="text-danger" *ngIf="!age.valid && age.touched">required 0-18</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" class="form-control" email placeholder="enter email"
+                        ngModel required #email="ngModel">
+                    <small class="text-danger" *ngIf="! email.valid && email.touched">please enter valid email</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">password</label>
+                    <input type="text" id="password" name="password" class="form-control" placeholder="password" ngModel
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword"> Confirm Password</label>
+                    <input type="text" id="confirmPassword" name="confirmPassword" class="form-control"
+                        placeholder="confirm password" ngModel required>
+                </div>
+                <div>
+                    <label for="courcess">courcess</label>
+                    <select name="courcess" id="courcess" class="form-control">
+                        <option value="Angular">Angular</option>
+                        <option value="HTML">HTML</option>
+                        <option value="Javascript">Javascript</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="skills">skills</label>
+                    <input type="text" class="form-control" placeholder="Add skills">
+                    <button class="btn btn-light btn-sm mt-3"><i>+</i> Add skills</button>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>

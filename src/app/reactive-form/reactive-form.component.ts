@@ -7,6 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reactive-form.component.css']
 })
 export class ReactiveFormComponent implements OnInit {
+  submited:boolean = false;
   notAllowedNames = ['codemind', 'technology']
   genders = [
     {id:'1', value:'Male'},
@@ -30,6 +31,7 @@ export class ReactiveFormComponent implements OnInit {
     })
   }
   onSubmit(){
+    this.submited=true
     console.log(this.myReactiveForm);
     
 
