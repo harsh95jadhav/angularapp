@@ -8,11 +8,19 @@ import { DemoService } from '../services/demo.service';
 })
 export class Serviecomp1Component implements OnInit {
   products = {};
-
+  
   constructor(private _demoservice: DemoService) { }
 
   ngOnInit() {
+    // for service
     this.products = this._demoservice.products
+    // for http observable
+    this._demoservice.getUserData().subscribe(ProductData => {
+      console.log('data form api', ProductData);
+      console.table(ProductData)
+      
+    })
+
   }
 
   onSubscribe(){

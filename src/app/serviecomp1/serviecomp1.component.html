@@ -2,9 +2,36 @@
 
 <button (click)="onSubscribe()">subscribe</button>
 <br>
+<!-- for server -->
 <ng-container *ngFor="let product of products">
     product name : <strong>{{product.name}}</strong>
     product id : <strong>{{product.id}}</strong>
     <br>
 
 </ng-container>
+
+<!-- for http observable -->
+<table class="table" *ngFor="let product of products">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Adress</th>
+        <th scope="col">Company</th>
+        <th scope="col">Website</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+         <td>{{product.username}}</td>
+        <td>{{product.email}}</td>
+        <td>{{product.address}}</td>
+        <td>{{product.company}}</td>
+        <td>{{product.website}}</td> 
+      </tr>
+    </tbody>
+  </table>
