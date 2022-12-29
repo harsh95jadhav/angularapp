@@ -19,8 +19,17 @@ export class Subjectcomp1Component implements OnInit {
   }
 
   UpdateUserName(uname){
+    // pass the object insted of string
+    // var emp={
+    //   name:'harsh',
+    //   id:'123'
+    // }
     console.log(uname.value);
+    // next method is used for pass the message to observale i.e username
     this._UtilityService.username.next(uname.value);
+    // pass the object insted of string then use joson.stringify bcos it convet data from object to string
+    // this._UtilityService.username.next(JSON.stringify(emp))
+
     
 
   }
