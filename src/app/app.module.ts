@@ -26,6 +26,10 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { TemplateassComponent } from './templateass/templateass.component';
 import { Serviecomp1Component } from './serviecomp1/serviecomp1.component';
 import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
+import { Subjectcomp1Component } from './subjectcomp1/subjectcomp1.component';
+import { Subjectcomp2Component } from './subjectcomp2/subjectcomp2.component';
+import { Subjectcomp3Component } from './subjectcomp3/subjectcomp3.component';
+import { Subjectcomp4Component } from './subjectcomp4/subjectcomp4.component';
 
 
 @NgModule({
@@ -51,7 +55,11 @@ import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
     TemplateDrivenFormComponent,
     TemplateassComponent,
     Serviecomp1Component,
-    Servicecomp2Component
+    Servicecomp2Component,
+    Subjectcomp1Component,
+    Subjectcomp2Component,
+    Subjectcomp3Component,
+    Subjectcomp4Component
   
 
   ],
