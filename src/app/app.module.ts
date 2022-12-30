@@ -30,6 +30,8 @@ import { Subjectcomp1Component } from './subjectcomp1/subjectcomp1.component';
 import { Subjectcomp2Component } from './subjectcomp2/subjectcomp2.component';
 import { Subjectcomp3Component } from './subjectcomp3/subjectcomp3.component';
 import { Subjectcomp4Component } from './subjectcomp4/subjectcomp4.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { CountPipe } from './count.pipe';
 
 
 @NgModule({
@@ -59,7 +61,9 @@ import { Subjectcomp4Component } from './subjectcomp4/subjectcomp4.component';
     Subjectcomp1Component,
     Subjectcomp2Component,
     Subjectcomp3Component,
-    Subjectcomp4Component
+    Subjectcomp4Component,
+    PipedemoComponent,
+    CountPipe
   
 
   ],
