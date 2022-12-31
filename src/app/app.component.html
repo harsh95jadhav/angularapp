@@ -29,16 +29,16 @@
 <!-- <app-demodirectives></app-demodirectives> -->
 <!-- <router-outlet></router-outlet> -->
 <!-- <app-dirassign></app-dirassign> -->
-<hr input work>
+<!-- <hr input work> -->
 <!-- <div>
   <h1>@Input work</h1>
   <input type="text " (keyup.enter)="getData($event)">
 <app-input [idata]="ddata"></app-input>
 </div>
 <br> -->
-<hr>
+<!-- <hr> -->
 <!-- <app-remove-add></app-remove-add> -->
-<hr>
+<!-- <hr> -->
 <!-- <select (change)="uid=sid.value" #sid>  -->
   <!-- /*without creating method directly assign the value -->
   <!-- <option selected disabled>No value selected</option> -->
@@ -49,7 +49,7 @@
 <!-- <app-hook [userid]="uid"> -->
   <!-- <h1>This is child component from parent component</h1> -->
 <!-- </app-hook> -->
-<hr>
+<!-- <hr> -->
 <!-- {{myData.srNo}} -->
 <!-- <hr>
 <div>
@@ -95,4 +95,16 @@
 <app-subjectcomp3></app-subjectcomp3>
 <app-subjectcomp4></app-subjectcomp4> -->
 <!-- <app-pipedemo></app-pipedemo> -->
-<app-filterpipe></app-filterpipe>
+<!-- <app-filterpipe></app-filterpipe> -->
+
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="home/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="aboutus/">About us</a></li>
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="contactus/">Contact us</a></li>
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="product/">Product</a></li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>
