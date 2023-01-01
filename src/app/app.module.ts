@@ -39,6 +39,11 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TVComponent } from './product/tv/tv.component';
+import { TabletComponent } from './product/tablet/tablet.component';
+import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
 
 
 @NgModule({
@@ -77,7 +82,12 @@ import { LoginComponent } from './login/login.component';
     ContactusComponent,
     ProductComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    PagenotfoundComponent,
+    LaptopComponent,
+    TVComponent,
+    TabletComponent,
+    WashingmachineComponent
   
 
   ],
