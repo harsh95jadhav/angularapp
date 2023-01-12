@@ -13,6 +13,8 @@ const routes: Routes = [
   { path:'home',component: HomeComponent },
   { path:'aboutus',component: AboutusComponent},//localhosts://4200/aboutus
   { path:'contactus',component: ContactusComponent},
+  { path:'product',loadChildren: './product/promodule.module#PromoduleModule'},
+  { path:'Orders',loadChildren: './orders/orders.module#OrdersModule'},
   { path:'**',component: PagenotfoundComponent}
 ];
 
@@ -20,4 +22,10 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor(){
+    console.log("app routing module called");
+    
+  }
+
+ }

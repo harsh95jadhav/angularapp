@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log("product module called");
+    
+   }
 
   ngOnInit() {
   }

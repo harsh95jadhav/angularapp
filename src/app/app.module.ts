@@ -41,6 +41,8 @@ import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { PromoduleModule } from './product/promodule.module';
+import { OrderComponent } from './order/order.component';
+import { OrdersModule } from './orders/orders.module';
 
 
 @NgModule({
@@ -80,7 +82,8 @@ import { PromoduleModule } from './product/promodule.module';
     HomeComponent,
     LoginComponent,
     PagenotfoundComponent,
-    DemopostComponent
+    DemopostComponent,
+    OrderComponent,
   
 
   ],
@@ -92,7 +95,6 @@ import { PromoduleModule } from './product/promodule.module';
   // },
   imports: [
     BrowserModule,
-    PromoduleModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -102,4 +104,9 @@ import { PromoduleModule } from './product/promodule.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    console.log("appmodule called");
+    
+  }
+ }

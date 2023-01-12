@@ -8,7 +8,7 @@ import { TVComponent } from './tv/tv.component';
 import { WashingmachineComponent } from './washingmachine/washingmachine.component';
 
 const promodule:Routes = [
-  { path:'product',component:ProductComponent, children: [ 
+  { path:'',component:ProductComponent, children: [ 
     // when open product on same page
   // { path:'product',children:[
   //   {path: '', component:ProductComponent},
@@ -38,4 +38,9 @@ const promodule:Routes = [
 
   ]
 })
-export class PromoduleModule { }
+export class PromoduleModule {
+  constructor(){
+    console.log("pro module called");
+    
+  }
+ }
