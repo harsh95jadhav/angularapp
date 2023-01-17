@@ -1,0 +1,19 @@
+<p>rapidapi works!</p>
+<table class="col">
+    <thead class="head">
+        <tr>
+            <th>uuid</th>
+            <th>title</th>
+            <th>publisher</th>
+            <th>link</th>
+        </tr>
+    </thead>
+    <tbody class="body">
+        <tr *ngFor="let f of finance">
+            <td>{{f.uuid}}</td>
+            <td>{{f.title}}</td>
+            <td>{{f.publisher}}</td>
+            <td>{{f.link}}</td>
+        </tr>
+    </tbody>
+</table>

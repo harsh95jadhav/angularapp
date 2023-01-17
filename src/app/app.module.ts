@@ -43,6 +43,7 @@ import { DemopostComponent } from './demopost/demopost.component';
 import { PromoduleModule } from './product/promodule.module';
 import { OrderComponent } from './order/order.component';
 import { OrdersModule } from './orders/orders.module';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
 
 
 @NgModule({
@@ -84,6 +85,7 @@ import { OrdersModule } from './orders/orders.module';
     PagenotfoundComponent,
     DemopostComponent,
     OrderComponent,
+    RapidapiComponent,
   
 
   ],
