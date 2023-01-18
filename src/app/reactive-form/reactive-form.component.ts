@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FireBasePost } from '../model/firebasepost';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-reactive-form',
@@ -15,11 +17,16 @@ export class ReactiveFormComponent implements OnInit {
 
   ]
   myReactiveForm:FormGroup;
-  constructor() {
+  firebasepost:FireBasePost;
+  constructor(private _firebaseservice:FirebaseService) {
     this.createForm();
    }
 
   ngOnInit() {
+    this._firebaseservice.getPostDataFirebase().subscribe(res =>{
+      console.log('get data from firebase',res);
+      
+    })
   }
   createForm(){
     this.myReactiveForm = new FormGroup({
@@ -32,8 +39,20 @@ export class ReactiveFormComponent implements OnInit {
   }
   onSubmit(){
     this.submited=true
-    console.log(this.myReactiveForm);
+    // console.log(this.myReactiveForm);
+    this.firebasepost=new FireBasePost();
+    this.firebasepost.Username=this.myReactiveForm['controls'].Username.value;
+    this.firebasepost.email=this.myReactiveForm['controls'].email.value;
+    this.firebasepost.course=this.myReactiveForm['controls'].course.value;
+    this.firebasepost.gender=this.myReactiveForm['controls'].gender.value;
+    // console.log(this.firebasepost);
     
+
+
+   this._firebaseservice.createPostDataReactiveForm(this.firebasepost).subscribe(res=>{
+    console.log('post from reactive form',res);
+    
+   })
 
   }
 
